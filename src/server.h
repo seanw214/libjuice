@@ -9,7 +9,7 @@
 #ifndef JUICE_SERVER_H
 #define JUICE_SERVER_H
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 
 #include "addr.h"
 #include "juice.h"
@@ -118,6 +118,6 @@ int server_process_turn_send(juice_server_t *server, const stun_message_t *msg,
 int server_process_channel_data(juice_server_t *server, char *buf, size_t len,
                                 const addr_record_t *src);
 
-#endif // ifndef NO_SERVER
+#endif // ifndef NO_JUICE_SERVER
 
 #endif

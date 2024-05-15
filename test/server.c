@@ -6,7 +6,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 
 #include "juice/juice.h"
 
@@ -271,4 +271,4 @@ static void on_recv2(juice_agent_t *agent, const char *data, size_t size, void *
 	success = true;
 }
 
-#endif // ifndef NO_SERVER
+#endif // ifndef NO_JUICE_SERVER

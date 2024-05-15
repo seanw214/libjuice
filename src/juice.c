@@ -11,7 +11,7 @@
 #include "agent.h"
 #include "ice.h"
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 #include "server.h"
 #endif
 
@@ -186,7 +186,7 @@ JUICE_EXPORT const char *juice_state_to_string(juice_state_t state) {
 }
 
 JUICE_EXPORT juice_server_t *juice_server_create(const juice_server_config_t *config) {
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 	if (!config)
 		return NULL;
 
@@ -199,7 +199,7 @@ JUICE_EXPORT juice_server_t *juice_server_create(const juice_server_config_t *co
 }
 
 JUICE_EXPORT void juice_server_destroy(juice_server_t *server) {
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 	if (server)
 		server_destroy(server);
 #else
@@ -208,7 +208,7 @@ JUICE_EXPORT void juice_server_destroy(juice_server_t *server) {
 }
 
 JUICE_EXPORT uint16_t juice_server_get_port(juice_server_t *server) {
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 	return server ? server_get_port(server) : 0;
 #else
 	(void)server;
@@ -219,7 +219,7 @@ JUICE_EXPORT uint16_t juice_server_get_port(juice_server_t *server) {
 JUICE_EXPORT int juice_server_add_credentials(juice_server_t *server,
                                               const juice_server_credentials_t *credentials,
                                               unsigned long lifetime_ms) {
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 	if (!server || !credentials)
 		return JUICE_ERR_INVALID;
 

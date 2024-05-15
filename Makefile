@@ -19,9 +19,9 @@ else
         CFLAGS+=-DUSE_NETTLE=0
 endif
 
-NO_SERVER ?= 0
-ifneq ($(NO_SERVER), 0)
-        CFLAGS+=-DNO_SERVER
+NO_JUICE_SERVER ?= 0
+ifneq ($(NO_JUICE_SERVER), 0)
+        CFLAGS+=-DNO_JUICE_SERVER
 endif
 
 FORCE_M32 ?= 0

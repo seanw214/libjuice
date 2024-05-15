@@ -23,7 +23,7 @@ int test_conflict(void);
 int test_bind(void);
 int test_ufrag(void);
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 int test_server(void);
 #endif
 
@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
 		return -1;
 	}
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 	printf("\nRunning server test...\n");
 	if (test_server()) {
 		fprintf(stderr, "Server test failed\n");

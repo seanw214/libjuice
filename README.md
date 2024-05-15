@@ -33,7 +33,7 @@ The limitations compared to a fully-featured ICE agent are:
 - Only one component is supported, which is sufficient for WebRTC Data Channels and multiplexed RTP+RTCP.
 - Candidates are gathered without binding to each network interface, which behaves identically to the full implementation on most client systems.
 
-It also implements a lightweight STUN/TURN server ([RFC8489](https://www.rfc-editor.org/rfc/rfc8489.html) and [RFC8656](https://www.rfc-editor.org/rfc/rfc8656.html)). The server can be disabled at compile-time with the `NO_SERVER` flag.
+It also implements a lightweight STUN/TURN server ([RFC8489](https://www.rfc-editor.org/rfc/rfc8489.html) and [RFC8656](https://www.rfc-editor.org/rfc/rfc8656.html)). The server can be disabled at compile-time with the `NO_JUICE_SERVER` flag.
 
 ## Dependencies
 

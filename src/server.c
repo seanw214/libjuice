@@ -6,7 +6,7 @@
  * file, You can obtain one at https://mozilla.org/MPL/2.0/.
  */
 
-#ifndef NO_SERVER
+#ifndef NO_JUICE_SERVER
 
 #include "server.h"
 #include "const_time.h"
@@ -1141,4 +1141,4 @@ int server_process_channel_data(juice_server_t *server, char *buf, size_t len,
 	return 0;
 }
 
-#endif // ifndef NO_SERVER
+#endif // ifndef NO_JUICE_SERVER
